@@ -1,23 +1,29 @@
-topology_path:
+topology_path: '../mek1-1IR3/NEWamber_1IR3g6/step3_charmm2amber.pdb'
 trajectory_paths:
-  -
-selection_names:
-  -
+  - '../mek1-1IR3/NEWamber_1IR3g6/step5_5.nc'
+  - '../mek1-1IR3/NEWamber_1IR3g6/step5_20.nc'
+selection_resid_nums:
+  - 144
+  - 197
+  - 146
+  - 378
 int_pairs:
   # Place pair names defined above in list in a list
-  - []
+  - [144, 378]
+  - [197, 378]
+  - [146, 378]
 trajectory_settings:
-  start:
-  stop:
-  step:
+  start: 0
+  stop: 1000
+  step: 1
 system_settings:
-  ncpus:
-  memory:
-  time:
+  ncpus: 12
+  memory: '64GB'
+  time: 48:00:00
 opt_settings:
   pH: 7.0
 sapt_settings:
-  method: 'sapt'
+  method: 'sapt0'
   basis: 'jun-cc-pvdz'
   settings:
     reference: 'rhf'
