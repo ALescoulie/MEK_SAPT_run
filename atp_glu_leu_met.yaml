@@ -7,12 +7,13 @@ selection_resid_nums:
   - 197
   - 146
   - 74
-  - 376
+  - 369
 int_pairs:
   # Place pair names defined above in list in a list
-  - [144, 376]
-  - [197, 376]
-  - [146, 376]
+  - [144, 369]
+  - [197, 369]
+  - [146, 369]
+  - [74, 369]
 trajectory_settings:
   start: 0
   stop: 1000
