@@ -1,8 +1,8 @@
-topology_path: '~MEK1/NEWamber_1IR3g6/step3_charmm2amber.pdb'
+topology_path: '~/MEK1/NEWamber_1IR3g6/step3_charmm2amber.pdb'
 trajectory_paths:
-  - '~MEK1/NEWamber_1IR3g6/step5_5.nc'
-  - '~MEK1/NEWamber_1IR3g6/step5_20.nc'
-selection_resid_nums:
+  - '~/MEK1/NEWamber_1IR3g6/step5_5.nc'
+  - '~/MEK1/NEWamber_1IR3g6/step5_20.nc'
+selection_resid_num:
   - 144
   - 197
   - 146
