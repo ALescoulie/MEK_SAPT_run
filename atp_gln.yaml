@@ -1,26 +1,19 @@
-topology_path: '../mek1-1IR3/NEWamber_1IR3g6/step3_charmm2amber.pdb'
+topology_path: '/home/alia/MEK1/NEWamber_1IR3g6/step3_charmm2amber.psf'
 trajectory_paths:
-  - '../mek1-1IR3/NEWamber_1IR3g6/step5_5.nc'
-  - '../mek1-1IR3/NEWamber_1IR3g6/step5_20.nc'
-selection_resid_nums:
-  - 144
-  - 197
-  - 146
-  - 74
+  - '/home/alia/MEK1/NEWamber_1IR3g6/step5_5.nc'
+selection_resid_num:
+  - 153
   - 369
 int_pairs:
   # Place pair names defined above in list in a list
-  - [144, 369]
-  - [197, 369]
-  - [146, 369]
-  - [74, 369]
+  - [153, 369]
 trajectory_settings:
   start: 0
   stop: 1000
   step: 1
 system_settings:
   ncpus: 12
-  memory: '64GB'
+  memory: '12GB'
   time: 48:00:00
 opt_settings:
   pH: 7.0
