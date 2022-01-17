@@ -101,18 +101,22 @@ class TrajectorySAPT(AnalysisBase):
             dimer = psi4.geometry(coords)
             psi4.set_options(self._settings)
             psi4.set_memory(self._mem)
-
+            psi4.set_num_threads(self._cfg.ncpus)
+            psi4.envvar_scratch()
             logger.info(f'Starting SAPT for {pair}')
 
             if self._save_psi_out:
                 psi4.set_output_file(f'sapt_{pair[0]}-{pair[1]}_{self._ts.time}.out')  # Saves output file
-
-            psi4.energy(f'{self._method}/{self._basis}', molecule=dimer)
-            sapt = psi4.variable('SAPT TOTAL ENERGY')
-            result = [f'{pair[0]}-{pair[1]}', self._ts.time, sapt*self._mht_to_kcalmol]
-            for r in range(len(result)):
-                self._res_dict[self._col[r]].append(result[r])
-
+            
+            try:
+                psi4.energy(f'{self._method}/{self._basis}', molecule=dimer)
+                sapt = psi4.variable('SAPT TOTAL ENERGY')
+                result = [f'{pair[0]}-{pair[1]}', self._ts.time, sapt*self._mht_to_kcalmol]
+                for r in range(len(result)):
+                    self._res_dict[self._col[r]].append(result[r])
+            except psi4.PsiException:
+                result = [f'{pair[0]}-{pair[1]}', self._ts.time, None]
+                
     def _conclude(self) -> None:
         for k in self._col:
             self.results[k] = self._res_dict[k]
