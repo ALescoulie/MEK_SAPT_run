@@ -1,0 +1,25 @@
+topology_path: '/home/alia/MEK1/NEWamber_1IR3g6/step3_charmm2amber.psf'
+trajectory_paths:
+  - '/home/alia/MEK1/NEWamber_1IR3g6/step5_5.nc'
+selection_resid_num:
+  - 144
+  - 369
+int_pairs:
+  # Place pair names defined above in list in a list
+  - [144, 369]
+trajectory_settings:
+  start: 0
+  stop: 1000
+  step: 1
+system_settings:
+  ncpus: 12
+  memory: '12GB'
+  time: 48:00:00
+opt_settings:
+  pH: 7.0
+sapt_settings:
+  method: 'sapt0'
+  basis: 'jun-cc-pvdz'
+  settings:
+    reference: 'rhf'
+  save_psi4_output: true
