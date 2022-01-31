@@ -1,6 +1,6 @@
-topology_path: '/home/alia/MEK1/NEWamber_1IR3g6/step3_charmm2amber.psf'
+topology_path: '/home/alia/NEWamber_1IR3g6/step3_charmm2amber.psf'
 trajectory_paths:
-  - '/home/alia/MEK1/NEWamber_1IR3g6/step5_5.nc'
+  - '/home/alia/NEWamber_1IR3g6/step5_5.nc'
 selection_resid_num:
   - 144
   - 369
